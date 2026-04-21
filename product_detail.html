@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snacko</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+          <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  />
+    <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+        <link rel="stylesheet" href="css/prdt_detail.css">
+         <link rel="stylesheet" href="css/nav.css">
+</head>
+
+
+<body>
+
+<nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+  <div class="container d-flex align-items-center justify-content-between">
+
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="images/redlogo.jpeg" alt="Logo" class="logo">
+    </a>
+
+    <!-- Right Side (Mobile Icons + Search + Toggler) -->
+    <div class="d-flex align-items-center gap-2">
+
+      <!-- Mobile Search Icon -->
+      <div class="mobile-search d-lg-none">
+        <i class="fas fa-search" id="searchToggle"></i>
+      </div>
+
+      <!-- Icons (Mobile Only) -->
+      <div class="icons d-flex d-lg-none align-items-center">
+        <i class="far fa-user"></i>
+        <i class="far fa-heart"></i>
+        <div class="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+        </div>
+      </div>
+
+      <!-- Toggler -->
+      <button class="navbar-toggler border-0 shadow-none p-0"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarContent">
+        <i class="fas fa-bars text-white"></i>
+      </button>
+
+    </div>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+      
+      <ul class="navbar-nav mb-2 mb-lg-0 text-center">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+      </ul>
+
+      <!-- Desktop Right Section -->
+      <div class="d-lg-flex d-none align-items-center right-section ms-auto">
+
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search snacks...">
+        </div>
+
+        <div class="icons">
+          <i class="far fa-user"></i>
+          <i class="far fa-heart"></i>
+          
+            <i class="fas fa-shopping-cart"></i>
+          
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<!-- ✅ Mobile Search Box OUTSIDE NAVBAR -->
+<div class="mobile-search-box" id="mobileSearchBox">
+  <input type="text" placeholder="Search snacks...">
+</div>
+
+
+
+
+
+
+
+
+
+<section class="product-page" style="margin-top: 50px;">
+  <div class="product-container">
+    
+    <div class="product-gallery">
+      <div class="main-img-container">
+        <img src="images/detail.png" alt="Banana Chips" id="mainImage">
+      </div>
+      <div class="thumbnail-bar">
+        <img src="images/detail.png" alt="View 1" class="active" onclick="changeImage(this)">
+        <img src="images/prdt.png" alt="View 2" onclick="changeImage(this)">
+        <img src="images/prdt1.png" alt="View 3" onclick="changeImage(this)">
+      </div>
+    </div>
+
+    <div class="product-details">
+      <h1 class="brand-title">BANANA CHIPS</h1>
+      
+      <div class="rating-row">
+        <div class="stars">★★★★★</div>
+        <div class="review-text">48 REVIEWS</div>
+      </div>
+
+      <div class="price-row">
+        <span class="price-val">$5.99</span>
+        <span class="unit-val">/ 150g Pouch</span>
+      </div>
+
+      <div class="product-info">
+  <div class="quantity-container">
+    <label for="quantity">QUANTITY</label>
+    <div class="quantity-selector">
+      <button type="button" class="qty-btn minus" onclick="updateQty(-1)">−</button>
+      <input type="number" id="quantity" value="1" min="1" readonly>
+      <button type="button" class="qty-btn plus" onclick="updateQty(1)">+</button>
+    </div>
+  </div>
+
+  
+  
+  </div>
+      <div class="button-group">
+        <button class="btn-primary">Add to Bag</button>
+        <button class="btn-secondary">BUY NOW</button>
+      </div>
+
+      <div class="info-card">
+        <div class="info-item">
+          <div class="icon-circle">🚚</div>
+          <div class="text-block">
+            <span class="item-head">FREE SHIPPING</span>
+            <p>On orders over $35.00</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="icon-circle">🛡️</div>
+          <div class="text-block">
+            <span class="item-head">ORGANIC CERTIFIED</span>
+            <p>Grown without synthetic pesticides</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+ 
+</section>
+
+<section class="crunch-story">
+  <div class="crunch-container">
+    
+    <div class="crunch-text">
+      <span class="label">THE CULINARY ART</span>
+      <h2>The Crunch Story</h2>
+      
+      <p class="crunch-quote">
+        "Every chip tells a journey from the tropical groves to our kitchen. We don't just fry bananas; we preserve a moment of crisp perfection."
+      </p>
+      
+      <p>Our artisanal process begins with hand-selected green plantains, harvested at the peak of their starch-to-sugar ratio. We slice them ultra-thin before kettle-cooking them in small batches using pure, cold-pressed coconut oil.</p>
+      
+      <p>This ancient technique ensures a snap that echoes with every bite, finished with a whisper of solar-evaporated sea salt.</p>
+    </div>
+
+    <div class="crunch-image">
+      <img src="images/detail1.png" alt="Artisanal kettle cooking process" class="story-img">
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<section class="product-transparency">
+  <div class="transparency-container">
+    
+    <div class="transparency-card ingredients-card">
+      <h2 class="section-title">WHAT'S INSIDE</h2>
+      
+      <div class="ingredient-list">
+        <div class="ingredient-item">
+          <span class="ingredient-name">BANANAS</span>
+          <span class="ingredient-desc">Responsibly Sourced</span>
+        </div>
+        <div class="ingredient-item">
+          <span class="ingredient-name">COCONUT OIL</span>
+          <span class="ingredient-desc">Non-Hydrogenated</span>
+        </div>
+        <div class="ingredient-item">
+          <span class="ingredient-name">SEA SALT</span>
+          <span class="ingredient-desc">Solar Evaporated</span>
+        </div>
+      </div>
+
+      <div class="tag-group">
+        <span class="tag">NON-GMO</span>
+        <span class="tag">GLUTEN-FREE</span>
+        <span class="tag">VEGAN</span>
+      </div>
+    </div>
+
+    <div class="transparency-card nutrition-card">
+      <h2 class="section-title">NUTRITIONAL FACTS</h2>
+      
+      <div class="nutrition-label">
+        <h3>NUTRITION FACTS</h3>
+        <div class="label-row main-row">
+          <span>SERVING SIZE 1oz (28g)</span>
+        </div>
+        <div class="label-row line-thick">
+          <strong>AMOUNT PER SERVING</strong>
+          <strong>150</strong>
+        </div>
+        <div class="label-row">
+          <span>TOTAL FAT 9g</span>
+          <span>12%</span>
+        </div>
+        <div class="label-row">
+          <span>SODIUM 110mg</span>
+          <span>5%</span>
+        </div>
+        <div class="label-row">
+          <span>TOTAL CARBOHYDRATE 18g</span>
+          <span>7%</span>
+        </div>
+        <div class="label-row no-border">
+          <span>PROTEIN 1g</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="shipping-returns">
+  <div class="sr-container">
+    <h2 class="sr-main-title">SHIPPING & RETURNS</h2>
+    
+    <div class="sr-grid">
+      <div class="sr-column">
+        <span class="sr-label">FAST DELIVERY</span>
+        <p>Orders placed before 2 PM EST ship same-day. Standard shipping takes 3–5 business days. Express options available at checkout.</p>
+      </div>
+
+      <div class="sr-column">
+        <span class="sr-label">OUR PROMISE</span>
+        <p>Not satisfied with the crunch? We offer a 30-day "Appetite Guarantee". If you don't love it, we'll replace it or refund you, no questions asked.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- BRAND -->
+    <div class="footer-col">
+  <img src="images/whitelogo.jpeg" alt="Snacko Logo" class="footer-logo">
+
+  <p>
+    Premium snacks crafted with care. Bringing bold flavors
+    and quality ingredients to your table.
+  </p>
+</div>
+
+    <!-- LINKS -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- SUPPORT -->
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Shipping</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="footer-col">
+      <h4>Stay Updated</h4>
+      <p>Subscribe for latest offers</p>
+
+      <div class="footer-input">
+        <input type="email" placeholder="Your email">
+        <button>→</button>
+      </div>
+
+     <div class="socials">
+  <a href="#"><i class="fab fa-facebook-f"></i></a>
+  <a href="#"><i class="fab fa-whatsapp"></i></a>
+  <a href="#"><i class="fab fa-instagram"></i></a>
+</div>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>© 2025 Snacko. All rights reserved.</p>
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+window.addEventListener("scroll", function () {
+  const navbar = document.querySelector(".custom-navbar");
+  navbar.classList.toggle("scrolled", window.scrollY > 50);
+});
+
+
+
+const searchToggle = document.getElementById("searchToggle");
+const searchBox = document.getElementById("mobileSearchBox");
+
+searchToggle.addEventListener("click", () => {
+  searchBox.classList.toggle("active");
+});
+
+  
+
+function changeImage(element) {
+  // Update main image source
+  document.getElementById('mainImage').src = element.src;
+  
+  // Remove 'active' class from all thumbnails
+  let thumbs = document.querySelectorAll('.thumbnail-bar img');
+  thumbs.forEach(img => img.classList.remove('active'));
+  
+  // Add 'active' class to clicked thumbnail
+  element.classList.add('active');
+}
+
+
+
+
+
+
+
+
+
+function updateQty(change) {
+  const qtyInput = document.getElementById('quantity');
+  let currentVal = parseInt(qtyInput.value);
+  
+  let newVal = currentVal + change;
+  
+  // Prevent quantity from going below 1
+  if (newVal >= 1) {
+    qtyInput.value = newVal;
+  }
+}
+
+</script>
+</body>
+</html>

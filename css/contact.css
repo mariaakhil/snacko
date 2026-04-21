@@ -1,0 +1,334 @@
+.contact-banner {
+  /* Replace with your actual background image URL */
+  background-image: url('images/bg1.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Optional: creates a subtle parallax effect */
+  min-height: 500px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.banner-overlay {
+  background: rgba(0, 0, 0, 0.4); /* Darkens the image so text is readable */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.banner-content {
+  text-align: center;
+  max-width: 700px;
+  color: #ffffff;
+}
+
+.banner-label {
+  font-weight: 800;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.banner-content h2 {
+  font-size: 4.5rem; /* Large, punchy heading */
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.banner-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 35px;
+  opacity: 0.9;
+}
+
+.banner-btn {
+  display: inline-block;
+  background-color: #bc000d; /* Brand Red */
+  color: white;
+  padding: 18px 45px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: transform 0.3s ease;
+}
+
+.banner-btn:hover {
+  transform: scale(1.05);
+  background-color: #e31e24;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+
+@media (max-width: 768px) {
+  .contact-banner {
+    min-height: 400px;
+    background-attachment: scroll; /* Smoother on mobile */
+  }
+
+  .banner-content h2 {
+    font-size: 3rem;
+  }
+
+  .banner-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-content h2 {
+    font-size: 2.5rem;
+  }
+  
+  .banner-btn {
+    padding: 15px 35px;
+    width: 100%; /* Full width button for easier tapping */
+  }
+}
+
+
+
+
+
+
+
+
+
+.contact-details-section {
+  padding: 60px 10%;
+  background-color: #fef6f3;
+  font-family: 'Inter', sans-serif;
+}
+
+.contact-flex-container {
+  display: flex;
+  gap: 40px;
+  align-items: stretch;
+}
+
+/* FORM STYLES */
+.form-container {
+  flex: 1.5;
+  background: #fff;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.input-group {
+  flex: 1;
+  margin-bottom: 25px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #a32a2a;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.input-group input, 
+.input-group textarea {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-bottom: 1px solid #eee;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  border-bottom-color: #bc000d;
+}
+
+.send-query-btn {
+  background-color: #bc000d;
+  color: white;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(188, 0, 13, 0.3);
+}
+
+/* IMAGE CARD STYLES */
+.lab-image-card {
+  flex: 1;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.lab-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.lab-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  color: #fff;
+}
+
+.lab-overlay h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.lab-overlay p {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+
+@media (max-width: 992px) {
+  .contact-flex-container {
+    flex-direction: column;
+  }
+  
+  .form-container {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .contact-details-section {
+    padding: 40px 15px;
+  }
+  
+  .send-query-btn {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contact-info-row {
+  padding: 40px 10%;
+  background-color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+.info-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.info-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 25px;
+  background-color: #fef6f3; /* Matching brand blush background */
+  border-radius: 15px;
+  border: 1px solid #fdeeee; /* Matching border color */
+  transition: transform 0.3s ease;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+}
+
+.info-icon {
+  font-size: 1.5rem;
+  background: #fff;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.info-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #a32a2a; /* Brand Red */
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.info-content p, 
+.info-content a {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.info-content a:hover {
+  color: #bc000d;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+
+@media (max-width: 992px) {
+  .info-grid {
+    flex-wrap: wrap; /* Allows wrapping on tablets */
+  }
+  
+  .info-box {
+    flex: 1 1 calc(45% - 20px); /* Two columns on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-info-row {
+    padding: 30px 20px;
+  }
+
+  .info-box {
+    flex: 1 1 100%; /* Single column on mobile */
+  }
+}
