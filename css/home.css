@@ -472,45 +472,52 @@ background: #fff;
   }
 }
 
-
 @media (max-width: 768px) {
-  /* Stack the main sections (Text on top, Grid on bottom) */
+
   .content-wrapper {
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 30px;
+    gap: 35px;
   }
 
-  /* Keep the products in two neat columns */
+  .info-side h1 {
+    font-size: 2rem;
+  }
+
+  .info-side p {
+    font-size: 0.95rem;
+    margin: 0 auto;
+  }
+
   .grid-side {
-    grid-template-columns: 1fr 1fr; 
-    gap: 12px; /* Tighter gap for smaller screens */
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
   }
 
-  /* Reset the stagger so they align perfectly in the rows */
+  .product-card {
+    padding: 10px;
+  }
+
   .product-card.staggered {
-    transform: translateY(0); 
+    transform: translateY(0);
   }
 
-  /* Shrink text slightly so it fits the smaller cards */
+  .img-box {
+    aspect-ratio: 1.2 / 1; /* 👈 IMPORTANT: give space for text */
+    margin-bottom: 10px;
+  }
+
   .product-card h6 {
     font-size: 0.9rem;
+    line-height: 1.5;
+    margin-top: 6px;
+    display: block;
   }
 
-  .price {
-    font-size: 0.85rem;
-  }
-
-  /* Adjust padding so the cards have more room */
   .flavor-showcase {
     padding: 40px 15px;
   }
 }
-
-
-
-
-
 
 
 
