@@ -126,26 +126,14 @@ button, input, textarea, select {
   background: #e41e26;
 }
 
-
-
-
-
-@media (max-width: 768px) {
-  .hero-slide {
-    height: 80vh;
-    margin-top: 10px;
-  }
-
-  .hero-content h1 {
-    font-size: 40px;
-  }
-
-  .hero-content p {
-    font-size: 14px;
-  }
+/* Default state */
+.hero-mobile {
+  display: none;
 }
 
-
+.hero-mobile {
+  display: none;
+}
 
 
 

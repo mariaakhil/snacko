@@ -21,6 +21,49 @@
          <link rel="stylesheet" href="css/nav.css">
 </head>
 <style>
+/* 🔴 Hide mobile slider completely by default (strong rule) */
+.hero-mobile,
+.hero-mobile.owl-carousel {
+  display: none !important;
+}
+
+/* 🟢 Mobile only */
+@media (max-width: 768px) {
+
+  /* Hide desktop slider */
+  .hero-slider {
+    display: none !important;
+  }
+
+  /* Show mobile slider */
+  .hero-mobile.owl-carousel {
+    display: block !important;
+  }
+
+  /* Slide styling */
+  .hero-mobile-slide {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Content styling */
+  .hero-mobile-content {
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+  }
+
+  .hero-mobile-content h2 {
+    font-size: 28px;
+  }
+}
+
   
 .contact-banner {
   /* Replace with your actual background image URL */
@@ -156,6 +199,28 @@
   </div>
 
 </section>
+
+<section class="hero-mobile owl-carousel">
+
+  <div class="hero-mobile-slide" style="background-image: url('images/aboutbg.png');">
+    <div class="hero-mobile-content">
+      <h2>CRUNCH REDEFINED</h2>
+      <p>Premium banana chips, made for you.</p>
+      <a href="#" class="btn btn-red">Shop Now</a>
+    </div>
+  </div>
+
+  <div class="hero-mobile-slide" style="background-image: url('images/about.png');">
+    <div class="hero-mobile-content">
+      <h2>PURE TASTE</h2>
+      <p>Crafted for crunch lovers.</p>
+      <a href="#" class="btn btn-red">Explore</a>
+    </div>
+  </div>
+
+</section>
+
+
 
 
 <section class="category-section">
@@ -638,6 +703,16 @@ $('.hero-slider').owlCarousel({
   dots: true
 });
 
+
+$(document).ready(function(){
+  $('.hero-mobile').owlCarousel({
+    items: 1,
+    loop: true,
+    autoplay: true,
+    dots: true,
+    nav: false
+  });
+});
 
 
 
