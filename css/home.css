@@ -133,7 +133,7 @@ button, input, textarea, select {
 @media (max-width: 768px) {
   .hero-slide {
     height: 80vh;
-    margin-top: 60px;
+    margin-top: 40px;
   }
 
   .hero-content h1 {
