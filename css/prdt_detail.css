@@ -542,3 +542,61 @@
     margin-bottom: 40px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.weight-container {
+  margin-bottom: 15px;
+}
+
+.weight-container label {
+  
+  margin-bottom: 5px;
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #a32a2a; /* Matching brand red */
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.weight-select {
+  width: 120px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+
+display: flex;
+  align-items: center;
+  background: #fdeeee; /* Soft pink background */
+  
+
+}
+
+
+
+@media (max-width: 768px) {
+
+  .weight-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .weight-select {
+    margin: 0 auto;
+  }
+
+}

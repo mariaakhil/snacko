@@ -167,14 +167,7 @@ button, input, textarea, select {
   100% { transform: scale(1); }
 }
 
-/* Toggler animation */
-.navbar-toggler {
-  transition: transform 0.3s ease;
-}
 
-.navbar-toggler:hover {
-  transform: rotate(90deg);
-}
 
 /* Mobile Styles */
 @media (max-width: 991px) {
